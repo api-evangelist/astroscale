@@ -1,23 +1,72 @@
 aid: astroscale
+
 name: Astroscale
-description: 'Astroscale is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://images.ctfassets.net/k5fy2axdrsqr/3M0Ep5FG4nrFilGMY2R9me/636adf872fbbf6d5c04fa88cd31024f8/black_white_logo.png
+
+description: 'Astroscale provides on‑orbit servicing and space sustainability solutions, offering end‑to‑end services such as mission licensing, spectrum acquisition, insurance, and operations for debris removal and satellite life‑extension. The company aims to accelerate space development while ensuring long‑term orbital sustainability for future generations.'
+
 url: https://raw.githubusercontent.com/api-evangelist/astroscale/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Space
+- Sustainability
+- On‑orbit‑servicing
+- Debris‑removal
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/astroscale-hosts.yml
+- type: Vendors
+  url: vendors/astroscale-vendors.yml
+- type: Newsroom
+  url: https://www.astroscale.com/en/news
+- type: Leadership
+  url: https://astroscale.com/de/ir/management/info
+- type: DomainSecurity
+  url: security/astroscale-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/astroscale
+  url: https://www.astroscale.com
+- type: TermsOfService
+  url: https://www.astroscale.com/en/legal/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.astroscale.com/en/legal/privacy-policy
+- type: Support
+  url: https://www.astroscale.com/en/contact
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Unable to resolve api.astroscale.com or locate any OpenAPI/AsyncAPI/GraphQL spec.
+  evidence:
+    - url: https://api.astroscale.com/openapi.json
+      status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

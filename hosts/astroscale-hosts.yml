@@ -1,0 +1,54 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.astroscale.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: astroscale.com
+  role: api
+  relation: own
+- host: astroscale.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Leadership
+  serves: []
+  registrable_domain: astroscale.com
+  role: other
+  relation: own
+- host: www.astroscale.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - TermsOfService
+  - PrivacyPolicy
+  - Support
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: astroscale.com
+  role: website
+  relation: own
